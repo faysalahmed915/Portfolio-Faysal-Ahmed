@@ -1,24 +1,18 @@
-// import React, { useEffect, useState } from "react";
-
-import { useState } from "react";
-
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const ThemeToggle = () => {
-    // const themes = ["hobbyhublight", "hobbyhubdark", "light", "dark"];
-    // const themes = ["light", "dark"];
-    const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState("luxury"); // default fallback
 
-    // useEffect(() => {
-    //     document.documentElement.setAttribute("data-theme", theme);
-    // }, [theme]);
+    // On mount: load theme from localStorage or <html data-theme="">
+    useEffect(() => {
+        const storedTheme = localStorage.getItem("theme");
+        const currentTheme = storedTheme || document.documentElement.getAttribute("data-theme") || "luxury";
+        setTheme(currentTheme);
+        document.documentElement.setAttribute("data-theme", currentTheme);
+    }, []);
 
-    // const handleChange = (e) => {
-    //     setTheme(e.target.value);
-    // };
-
- const toggleTheme = () => {
-        const newTheme = theme === "light" ? "dark" : "light";
+    const toggleTheme = () => {
+        const newTheme = theme === "caramellatte" ? "luxury" : "caramellatte";
         setTheme(newTheme);
         document.documentElement.setAttribute("data-theme", newTheme);
         localStorage.setItem("theme", newTheme);
@@ -26,22 +20,11 @@ const ThemeToggle = () => {
 
     return (
         <div className="flex gap-2 items-center">
-            {/* <label className="font-bold">Theme:</label>
-            <select
-                className="select select-bordered select-sm"
-                value={theme}
-                onChange={handleChange}
-            >
-                {themes.map((t) => (
-                    <option key={t} value={t}>{t}</option>
-                ))}
-            </select> */}
-
-            <label className="swap swap-rotate ml-3 md:p-2 p-1 rounded-full bg-primary text-white hover:bg-primary-focus cursor-pointer transition duration-200">
+            <label className="swap swap-rotate ml-3 md:p-2 p-1 rounded-full bg-secondary text-white hover:bg-primary-focus cursor-pointer transition duration-200">
                 <input
                     type="checkbox"
                     onChange={toggleTheme}
-                    checked={theme === "dark"}
+                    checked={theme === "luxury"}
                 />
                 {/* Sun icon (Light mode) */}
                 <svg
