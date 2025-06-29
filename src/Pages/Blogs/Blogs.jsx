@@ -88,17 +88,17 @@ const blogsData = [
 
 const Blogs = () => {
     return (
-        <section className="max-w-7xl mx-auto px-4 py-12" id="blogs">
+        <section className="max-w-7xl mx-auto px-2 md:px-4 lg:px-8 py-12" id="blogs">
             <h2 className="text-3xl font-bold mb-8 text-center">Latest Blogs</h2>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                {blogsData.map(({ id, title, date, excerpt, url }) => (
+                {blogsData.map(({ id, title, date, excerpt }) => (
                     <article
                         key={id}
                         className="bg-base-200 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                     >
                         <h3 className="text-xl font-semibold mb-2">{title}</h3>
-                        <time className="block mb-4 text-sm text-muted">{new Date(date).toLocaleDateString()}</time>
-                        <p className="mb-4 text-base-content opacity-90">{excerpt}</p>
+                        <time className="block mb-4 text-sm text-amber-700 opacity-80 text-muted">Publlished Date: {new Date(date).toLocaleDateString()}</time>
+                        <p className="mb-4 text-primary opacity-90">{excerpt}</p>
                         {/* <a
                             href={url}
                             target="_blank"
@@ -108,7 +108,7 @@ const Blogs = () => {
                             Read More →
                         </a> */}
                         <Link to={'/blogs'}
-                        className="text-base-content font-semibold hover:underline">
+                        className="font-semibold hover:underline">
                         Read More →
                         </Link>
                     </article>

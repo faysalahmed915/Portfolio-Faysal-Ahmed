@@ -1,6 +1,10 @@
 import { Link, NavLink } from 'react-router';
 import ThemeToggle from '../Theme/ThemeToggle';
 import Logo from '../Shared/logo';
+import { HiArrowNarrowRight } from 'react-icons/hi';
+import { FiArrowRightCircle } from 'react-icons/fi';
+import { FaArrowRight } from 'react-icons/fa';
+import { RiArrowRightSLine } from 'react-icons/ri';
 
 const Navbar = () => {
 
@@ -16,10 +20,10 @@ const Navbar = () => {
             <NavLink to="/skills" className={({ isActive }) => isActive ? "text-base-content font-bold" : "font-bold"}>Skills</NavLink>
 
             <NavLink to="/projects" className={({ isActive }) => isActive ? "text-base-content font-bold" : "font-bold"}>Projects</NavLink>
-            
+
             <NavLink to="/blogs" className={({ isActive }) => isActive ? "text-base-content font-bold" : "font-bold"}>Blogs</NavLink>
         </>
-);
+    );
 
 
     return (
@@ -39,7 +43,7 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    
+
                     <div className='w-24 hidden lg:flex items-center'>
                         <Logo></Logo>
                     </div>
@@ -52,6 +56,17 @@ const Navbar = () => {
                 </div>
 
                 <div className="navbar-end gap-3">
+                    <Link to='/' className="btn btn-secondary btn-lg rounded-full px-8 font-semibold text-secondary-content
+                 hover:btn-primary transition-colors duration-300 shadow-lg
+                 transform hover:-translate-y-1 hover:text-primary-content">
+                        Hire Me
+                        {/* <HiArrowNarrowRight className="text-xl transition-transform duration-300 group-hover:translate-x-1" /> */}
+                        {/* <FiArrowRightCircle className="text-2xl transition-transform duration-300 hover:rotate-12" /> */}
+                        <FaArrowRight className="text-lg transition-transform duration-300 hover:translate-x-1.5 hover:scale-110" />
+                    </Link>
+                    {/* <RiArrowRightSLine className="text-2xl transition-all duration-300 hover:translate-x-2" /> */}
+
+
                     <ThemeToggle />
                 </div>
             </div>
