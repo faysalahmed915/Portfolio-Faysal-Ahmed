@@ -4,6 +4,10 @@ import ErrorPage from "../components/ErrorPage/ErrorPage";
 import FAQ from "../Pages/FAQ";
 import Home from "../Pages/Home/Home";
 import Blogs from "../Pages/Blogs/Blogs";
+import Projects from "../Pages/Projects/Projects";
+import ProjectDetails from "../Pages/Projects/ProjectDetails.jsx";
+import Skills from "../Pages/Skills/Skills.jsx";
+import About from "../Pages/About/About.jsx";
 
 
 export const Router = createBrowserRouter([
@@ -24,19 +28,23 @@ export const Router = createBrowserRouter([
             },
             {
                 path: '/about',
-                Component: FAQ
+                Component: About,
             },
             {
                 path: '/skills',
-                Component: Home,
+                Component: Skills,
             },
             {
                 path: '/projects',
-                Component: FAQ
+                Component: Projects,
             },
             {
                 path: '/blogs',
                 Component: Blogs,
+            },
+            {
+                path: "/projectDetails/:id",
+                Component: ProjectDetails,
             }
         ]
     }
