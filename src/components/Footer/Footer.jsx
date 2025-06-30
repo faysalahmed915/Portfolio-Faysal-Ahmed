@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { Link } from "react-router";
+import Logo from "../Shared/logo";
 
 const Footer = () => {
     return (
@@ -8,7 +9,10 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                     {/* Left Section */}
                     <div className="text-center md:text-left">
-                        <h2 className="text-xl font-semibold">Faysal Ahmed</h2>
+                        {/* <h2 className="text-xl font-semibold">Faysal Ahmed</h2> */}
+                        <div className="w-20">
+                            <Logo></Logo>
+                        </div>
                         <p className="text-sm opacity-70">Web Developer • Portfolio © {new Date().getFullYear()}</p>
                     </div>
 

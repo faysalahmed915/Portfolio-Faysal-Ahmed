@@ -1,5 +1,5 @@
-import { Link } from "react-router";
-
+import React from "react";
+import { motion } from "framer-motion";
 
 const blogsData = [
   {
@@ -81,41 +81,62 @@ const blogsData = [
     excerpt:
       "Enhance your web projects with practical UI/UX design principles tailored for developers.",
     url: "https://yourblog.com/ui-ux-design-tips-for-developers",
-  }
+  },
 ];
 
-
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      delay: i * 0.1,
+    },
+  }),
+};
 
 const Blogs = () => {
-    return (
-        <section className="max-w-7xl mx-auto px-2 md:px-4 lg:px-8 py-12" id="blogs">
-            <h2 className="text-3xl font-bold mb-8 text-center">Latest Blogs</h2>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                {blogsData.map(({ id, title, date, excerpt }) => (
-                    <article
-                        key={id}
-                        className="bg-base-200 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-                    >
-                        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-                        <time className="block mb-4 text-sm text-amber-700 opacity-80 text-muted">Publlished Date: {new Date(date).toLocaleDateString()}</time>
-                        <p className="mb-4 text-primary opacity-90">{excerpt}</p>
-                        {/* <a
-                            href={url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary font-semibold hover:underline"
-                        >
-                            Read More →
-                        </a> */}
-                        <Link to={'/blogs'}
-                        className="font-semibold hover:underline">
-                        Read More →
-                        </Link>
-                    </article>
-                ))}
-            </div>
-        </section>
-    );
+  return (
+    <section className="max-w-7xl mx-auto px-4 md:px-8 py-12" id="blogs">
+      <motion.h2
+        className="text-3xl font-bold mb-10 text-center text-primary"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+      >
+        Latest Blogs
+      </motion.h2>
+
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {blogsData.map(({ id, title, date, excerpt, url }, i) => (
+          <motion.article
+            key={id}
+            className="bg-base-200 p-6 rounded-xl shadow-md hover:shadow-xl transition-all"
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={i}
+          >
+            <h3 className="text-xl font-semibold mb-2 text-base-content">{title}</h3>
+            <time className="text-sm text-amber-600 block mb-4">
+              📅 {new Date(date).toLocaleDateString()}
+            </time>
+            <p className="mb-4 text-base-content/80">{excerpt}</p>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary font-semibold hover:underline"
+            >
+              Read More →
+            </a>
+          </motion.article>
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default Blogs;
