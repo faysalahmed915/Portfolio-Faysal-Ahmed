@@ -24,7 +24,7 @@ const Footer = () => {
                         <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition">
                             <FaLinkedin />
                         </a>
-                        <Link to='/about' className="hover:text-primary transition">
+                        <Link to='/contactMe' className="hover:text-primary transition">
                             <FaEnvelope />
                         </Link>
                     </div>

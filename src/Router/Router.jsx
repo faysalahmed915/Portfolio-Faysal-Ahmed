@@ -8,6 +8,7 @@ import Projects from "../Pages/Projects/Projects";
 import ProjectDetails from "../Pages/Projects/ProjectDetails.jsx";
 import Skills from "../Pages/Skills/Skills.jsx";
 import About from "../Pages/About/About.jsx";
+import ContactMe from "../Pages/Contact/ContactMe.jsx";
 
 
 export const Router = createBrowserRouter([
@@ -45,6 +46,10 @@ export const Router = createBrowserRouter([
             {
                 path: "/projectDetails/:id",
                 Component: ProjectDetails,
+            },
+            {
+                path: "/contactMe",
+                Component: ContactMe,
             }
         ]
     }
