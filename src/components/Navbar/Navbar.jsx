@@ -58,7 +58,9 @@ const Navbar = () => {
                 </div>
 
                 <div className="navbar-end gap-3">
-                    <Link to='/' className="btn btn-secondary btn-lg rounded-full px-8 font-semibold text-secondary-content
+                    <Link to='https://www.linkedin.com/in/eng-faysal-ahmed/' 
+                    target="_blank"
+                    className="btn btn-secondary btn-lg rounded-full px-8 font-semibold text-secondary-content
                  hover:btn-primary transition-colors duration-300 shadow-lg
                  transform hover:-translate-y-1 hover:text-primary-content">
                         Hire Me

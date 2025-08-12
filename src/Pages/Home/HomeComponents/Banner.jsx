@@ -53,12 +53,15 @@ const Banner = () => {
             >
               View Projects
             </Link> */}
-            <Link to='https://github.com/faysalahmed915'
-            target="_blank"
+            <a
+              href="https://drive.google.com/uc?export=download&id=16JC6BYqsIvEEIM2V0cxgSW9Ilotv2YJI"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-outline btn-primary rounded-full px-6"
             >
-              <FaDownload /> Resume
-            </Link>
+              <FaDownload className="mr-2" /> Resume
+            </a>
+
             {/* <a
               href="https://github.com/faysalahmed915"
               target="_blank"
