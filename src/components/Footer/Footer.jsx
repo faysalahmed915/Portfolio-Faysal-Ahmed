@@ -10,7 +10,7 @@ const Footer = () => {
                     {/* Left Section */}
                     <div className="text-center md:text-left">
                         {/* <h2 className="text-xl font-semibold">Faysal Ahmed</h2> */}
-                        <div className="w-20">
+                        <div>
                             <Logo></Logo>
                         </div>
                         <p className="text-sm opacity-70">Web Developer • Portfolio © {new Date().getFullYear()}</p>
