@@ -98,7 +98,7 @@ const cardVariants = {
 
 const Blogs = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 md:px-8 py-12" id="blogs">
+    <section className="px-2 md:px-4 lg:px-8 max-w-7xl mx-auto py-12 bg-base-200" id="blogs">
       <motion.h2
         className="text-3xl font-bold mb-10 text-center text-primary"
         initial={{ opacity: 0, y: -20 }}
@@ -113,7 +113,7 @@ const Blogs = () => {
         {blogsData.map(({ id, title, date, excerpt, url }, i) => (
           <motion.article
             key={id}
-            className="bg-base-200 p-6 rounded-xl shadow-md hover:shadow-xl transition-all"
+            className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-all"
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"

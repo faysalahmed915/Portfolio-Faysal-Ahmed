@@ -5,8 +5,8 @@ import { Link } from "react-router";
 
 const About = () => {
     return (
-        <section className="bg-base-200 text-base-content py-16 px-2 md:px-4 lg:px-8" id="about">
-            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <section className="bg-base-200 text-base-content py-16 px-2 md:px-4 lg:px-8 max-w-7xl mx-auto" id="about">
+            <div className="grid md:grid-cols-2 gap-10 items-center">
 
                 {/* Image */}
                 <motion.div

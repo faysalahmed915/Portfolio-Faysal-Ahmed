@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { HiArrowNarrowRight } from "react-icons/hi";
 import { FaGithub, FaLinkedin, FaFacebookSquare, FaDownload } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-router";

@@ -27,7 +27,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="bg-base-100 max-w-7xl mx-auto mt-4 px-4 md:px-8 py-12">
+    <div className="bg-base-200 max-w-7xl mx-auto px-4 md:px-8 py-12">
       <motion.h1
         className="text-4xl font-bold text-center mb-12 text-primary"
         initial={{ opacity: 0, y: -20 }}
@@ -42,7 +42,7 @@ const Projects = () => {
         {projects.map((project, index) => (
           <motion.div
             key={project.id}
-            className="flex flex-col-reverse lg:flex-row-reverse bg-base-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition"
+            className="flex flex-col-reverse lg:flex-row-reverse bg-base-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}

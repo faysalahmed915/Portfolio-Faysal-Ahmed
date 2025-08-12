@@ -80,7 +80,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section className="bg-base-100 text-base-content py-16 px-4 md:px-8 lg:px-16 min-h-screen">
+    <section className="bg-base-200 text-base-content py-16 px-2 md:px-4 lg:px-8 max-w-7xl mx-auto min-h-screen">
       <motion.h1
         className="text-4xl font-bold text-center mb-12 text-primary"
         initial={{ opacity: 0, y: -20 }}
@@ -90,7 +90,7 @@ const Skills = () => {
         My Tech Stack
       </motion.h1>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {skills.map((skill, index) => (
           <motion.div
             key={index}
