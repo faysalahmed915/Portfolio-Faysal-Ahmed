@@ -98,7 +98,7 @@ const cardVariants = {
 
 const Blogs = () => {
   return (
-    <section className="px-2 md:px-4 lg:px-8 max-w-7xl mx-auto py-12 bg-base-200" id="blogs">
+    <section className="px-2 md:px-4 lg:px-8 max-w-7xl mx-auto py-12" id="blogs">
       <motion.h2
         className="text-3xl font-bold mb-10 text-center text-primary"
         initial={{ opacity: 0, y: -20 }}
@@ -109,7 +109,7 @@ const Blogs = () => {
         Latest Blogs
       </motion.h2>
 
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 bg-base-200 p-8 rounded-2xl shadow-lg">
         {blogsData.map(({ id, title, date, excerpt, url }, i) => (
           <motion.article
             key={id}

@@ -4,8 +4,8 @@ import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPhone } from "react
 
 const ContactMe = () => {
   return (
-    <section id="contact" className="py-16 px-4 md:px-8 bg-base-200 text-base-content">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+    <section id="contact" className="py-16 px-4 md:px-8 max-w-7xl mx-auto text-base-content">
+      <div className="grid md:grid-cols-2 gap-10 items-start bg-base-200 p-8 rounded-2xl shadow-lg">
 
         {/* Left: Info */}
         <motion.div

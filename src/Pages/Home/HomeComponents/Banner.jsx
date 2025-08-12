@@ -71,13 +71,13 @@ const Banner = () => {
 
           {/* Social Icons */}
           <div className="flex gap-5 mt-6 justify-center lg:justify-start text-2xl">
-            <a href="https://github.com/faysaldev" target="_blank" rel="noreferrer">
+            <a href="https://github.com/faysalahmed915" target="_blank" rel="noreferrer">
               <FaGithub className="hover:text-white" />
             </a>
-            <a href="https://linkedin.com/in/faysaldev" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/eng-faysal-ahmed/" target="_blank" rel="noreferrer">
               <FaLinkedin className="hover:text-white" />
             </a>
-            <a href="https://facebook.com/faysaldev" target="_blank" rel="noreferrer">
+            <a href="https://www.facebook.com/profile.php?id=61577846498688" target="_blank" rel="noreferrer">
               <FaFacebookSquare className="hover:text-white" />
             </a>
           </div>

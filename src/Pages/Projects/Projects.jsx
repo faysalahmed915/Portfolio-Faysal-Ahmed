@@ -27,7 +27,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="bg-base-200 max-w-7xl mx-auto px-4 md:px-8 py-12">
+    <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
       <motion.h1
         className="text-4xl font-bold text-center mb-12 text-primary"
         initial={{ opacity: 0, y: -20 }}
@@ -38,7 +38,7 @@ const Projects = () => {
         My Projects
       </motion.h1>
 
-      <div className="space-y-14">
+      <div className="space-y-14 bg-base-200 p-8 rounded-2xl shadow-lg">
         {projects.map((project, index) => (
           <motion.div
             key={project.id}

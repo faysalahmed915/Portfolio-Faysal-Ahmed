@@ -5,8 +5,8 @@ import { Link } from "react-router";
 
 const About = () => {
     return (
-        <section className="bg-base-200 text-base-content py-16 px-2 md:px-4 lg:px-8 max-w-7xl mx-auto" id="about">
-            <div className="grid md:grid-cols-2 gap-10 items-center">
+        <section className="text-base-content py-16 px-2 md:px-4 lg:px-8 max-w-7xl mx-auto" id="about">
+            <div className="grid md:grid-cols-2 gap-10 items-center bg-base-200 p-8 rounded-2xl shadow-lg">
 
                 {/* Image */}
                 <motion.div
@@ -49,7 +49,7 @@ const About = () => {
                 className="mt-16"
             >
                 <h3 className="text-2xl font-semibold mb-4 text-secondary flex items-center gap-2"><FaTools /> Skills</h3>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-sm font-medium">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-sm font-medium bg-base-200 p-8 rounded-2xl shadow-lg">
                     {["HTML5", "CSS3", "JavaScript", "React.js", "Node.js", "Express.js", "MongoDB", "Firebase", "Tailwind CSS", "DaisyUI", "Git & GitHub", "REST API"].map((skill, index) => (
                         <div key={index} className="bg-base-100 shadow rounded-xl px-4 py-2 text-center hover:scale-105 transition-transform duration-300 border border-base-300">
                             {skill}
@@ -64,7 +64,7 @@ const About = () => {
                         transition={{ duration: 0.5 }}
                         className="mt-10 text-center"
                     >
-                        <Link to='/skills' className="btn btn-primary px-8 rounded-full mt-4">See More</Link>
+                        <Link to='/skills' className="btn btn-primary px-8 rounded-full">See More</Link>
                     </motion.div>
             </motion.div>
 
@@ -77,7 +77,7 @@ const About = () => {
                 className="mt-16"
             >
                 <h3 className="text-2xl font-semibold mb-4 text-secondary flex items-center gap-2"><FaProjectDiagram /> Highlights</h3>
-                <ul className="space-y-3 text-base list-disc pl-5">
+                <ul className="space-y-3 text-base list-disc pl-5 bg-base-200 p-8 rounded-2xl shadow-lg pl-12">
                     <li>Built 4+ full-stack projects using React, Node, Express, and MongoDB.</li>
                     <li>Implemented Firebase Auth, protected routes, and dynamic dashboards.</li>
                     <li>Familiar with mobile-first responsive design using Tailwind & DaisyUI.</li>
@@ -92,7 +92,7 @@ const About = () => {
                 transition={{ duration: 0.5 }}
                 className="mt-10 text-center"
             >
-                <Link to='/projects' className="btn btn-primary px-8 rounded-full mt-4">See My Projects</Link>
+                <Link to='/projects' className="btn btn-primary px-8 rounded-full">See My Projects</Link>
             </motion.div>
         </section>
     );
